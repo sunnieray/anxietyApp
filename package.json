@@ -1,0 +1,26 @@
+{
+  "name": "anxietyapp",
+  "version": "1.0.0",
+  "description": "set up npm init creates our package.json npm install parcel-bundler npm install --save firebase npm install bootstrap jquery popper.js in the package.json add a script start\": \"parcel index.html\" install the linter: npm install eslint --save-dev configure the linter: ./node_modules/.bin/eslint --init to run the server from terminal: npm start create a config file for Firebase credentials",
+  "main": "script.js",
+  "scripts": {
+    "start": "parcel index.html",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.11.2",
+    "bootstrap": "^4.3.1",
+    "firebase": "^7.5.0",
+    "images": "^3.0.2",
+    "jquery": "^3.4.1",
+    "parcel-bundler": "^1.12.4",
+    "popper.js": "^1.16.0"
+  },
+  "devDependencies": {
+    "eslint": "^6.7.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.18.2"
+  }
+}
