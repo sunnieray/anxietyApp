@@ -5,7 +5,6 @@ import Anxiety from './components/Anxiety';
 import Meditation from './components/Meditation';
 import Sleep from './components/Sleep';
 import Productivity from './components/Productivity';
-import Games from './components/Games';
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.css';
 import '@fortawesome/fontawesome-free/css/all.css';
@@ -19,7 +18,6 @@ function pageBuild() {
 	renderMeditation();
 	renderSleep();
 	renderProductivity();
-	renderGames();
 }
 
 function renderHeader() {
@@ -64,13 +62,5 @@ function renderProductivity() {
 	productivity.addEventListener('click', () => {
 		const main = document.querySelector('.main');
 		main.innerHTML = Productivity();
-	});
-}
-
-function renderGames() {
-	const games = document.querySelector('.nav-list__games');
-	games.addEventListener('click', () => {
-		const main = document.querySelector('.main');
-		main.innerHTML = Games();
 	});
 }

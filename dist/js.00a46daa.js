@@ -126,7 +126,7 @@ Object.defineProperty(exports, "__esModule", {
 exports.default = Header;
 
 function Header() {
-  return "\n    <nav class=\"nav\">\n    <h1 class='bg-white rounded nav-logo'>Anti-Anxiety App</h1>\n        <ul class='navbar navbar-expand-lg navbar-light bg-light  nav-list'>\n            <li class='nav-link nav-list__home'>Home</li>\n            <li class='nav-link nav-list__anxiety'>Anxiety & Stress</li>\n            <li class='nav-link nav-list__meditation'>Meditations</li>\n            <li class='nav-link nav-list__sleep'>Sleep</li>\n            <li class='nav-link nav-list__productivity'>Productivity</li><li class='nav-link nav-list__games'>Brain Games</li>\n\n        </ul>\n     </nav>\n";
+  return "\n    <nav class=\"nav\">\n    <h1 class='bg-white rounded nav-logo'></h1>\n        <ul class='navbar navbar-expand-lg navbar-light nav-list'>\n            <li class='nav-link nav-list__home'>Home</li>\n            <li class='nav-link nav-list__anxiety'>Anxiety</li>\n            <li class='nav-link nav-list__meditation'>Meditation</li>\n            <li class='nav-link nav-list__sleep'>Sleep</li>\n            <li class='nav-link nav-list__productivity'>Productivity</\n\n        </ul>\n     </nav>\n";
 }
 },{}],"images/rainbow.png":[function(require,module,exports) {
 module.exports = "/rainbow.a9a9f379.png";
@@ -213,24 +213,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function Productivity() {
   return "\n    <figure class=\"figure\">\n        <img src=\"".concat(_productivity.default, "\">\n        <figcaption class=\"figure-caption\">A caption for the above image.</figcaption>\n    </figure>\n    ");
 }
-},{"/images/productivity.png":"images/productivity.png"}],"images/games.png":[function(require,module,exports) {
-module.exports = "/games.b1a6b345.png";
-},{}],"js/components/Games.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = Games;
-
-var _games = _interopRequireDefault(require("/images/games.png"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function Games() {
-  return "\n    <figure class=\"figure\">\n        <img src=\"".concat(_games.default, "\">\n        <figcaption class=\"figure-caption\">A caption for the above image.</figcaption>\n    </figure>\n    ");
-}
-},{"/images/games.png":"images/games.png"}],"node_modules/process/browser.js":[function(require,module,exports) {
+},{"/images/productivity.png":"images/productivity.png"}],"node_modules/process/browser.js":[function(require,module,exports) {
 
 // shim for using process in browser
 var process = module.exports = {}; // cached from whatever global is present so that test runners that stub it
@@ -18187,8 +18170,6 @@ var _Sleep = _interopRequireDefault(require("./components/Sleep"));
 
 var _Productivity = _interopRequireDefault(require("./components/Productivity"));
 
-var _Games = _interopRequireDefault(require("./components/Games"));
-
 require("bootstrap");
 
 require("bootstrap/dist/css/bootstrap.css");
@@ -18207,7 +18188,6 @@ function pageBuild() {
   renderMeditation();
   renderSleep();
   renderProductivity();
-  renderGames();
 }
 
 function renderHeader() {
@@ -18254,15 +18234,7 @@ function renderProductivity() {
     main.innerHTML = (0, _Productivity.default)();
   });
 }
-
-function renderGames() {
-  var games = document.querySelector('.nav-list__games');
-  games.addEventListener('click', function () {
-    var main = document.querySelector('.main');
-    main.innerHTML = (0, _Games.default)();
-  });
-}
-},{"./components/Header":"js/components/Header.js","./components/Home":"js/components/Home.js","./components/Anxiety":"js/components/Anxiety.js","./components/Meditation":"js/components/Meditation.js","./components/Sleep":"js/components/Sleep.js","./components/Productivity":"js/components/Productivity.js","./components/Games":"js/components/Games.js","bootstrap":"node_modules/bootstrap/dist/js/bootstrap.js","bootstrap/dist/css/bootstrap.css":"node_modules/bootstrap/dist/css/bootstrap.css","@fortawesome/fontawesome-free/css/all.css":"node_modules/@fortawesome/fontawesome-free/css/all.css"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"./components/Header":"js/components/Header.js","./components/Home":"js/components/Home.js","./components/Anxiety":"js/components/Anxiety.js","./components/Meditation":"js/components/Meditation.js","./components/Sleep":"js/components/Sleep.js","./components/Productivity":"js/components/Productivity.js","bootstrap":"node_modules/bootstrap/dist/js/bootstrap.js","bootstrap/dist/css/bootstrap.css":"node_modules/bootstrap/dist/css/bootstrap.css","@fortawesome/fontawesome-free/css/all.css":"node_modules/@fortawesome/fontawesome-free/css/all.css"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -18290,7 +18262,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60003" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52638" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
